@@ -14,7 +14,8 @@
 
         <div class="container">
             <div id='coins'>{{core.coins}}</div> 
-            <button onclick="call_click()">Нажми меня</button>
+            {% comment %} <button onclick="call_click()">Нажми меня</button> {% endcomment %}
+            <img class='drac' src= "{% static 'imgs/drac.png' %}" = onclick="call_click()">
             <p>
                 Невероятная мощь клика: <span id="clikc_power">{{ core.clikc_power }}</span> 
             </p>
