@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(152, 217, 236);
+}
 .app {
     display: flex;
     flex-direction: row;
@@ -27,4 +30,10 @@
 .drac{
     width: 50%;
     cursor: pointer;
+}
+.boost_0{
+    background-color: white;
+}
+.boost_1{
+    background-color: rgb(28, 149, 165);
 }
