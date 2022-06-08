@@ -43,8 +43,8 @@ let Game = new GameSession()
 
 
 function call_click() {
-    // const kakashiNode = document.getElementById('kakashi')
-    // click_animation(kakashiNode, 50)
+    const kakashiNode = document.getElementById('drac')
+    click_animation(kakashiNode, 50)
     Game.add_coins(Game.clikc_power)
 }
 
@@ -77,14 +77,14 @@ function add_boost(parent, boost) {
     parent.appendChild(button) 
 }
 
-// /** Функция для анимации элемента, по которому происходит клик. */
-// function click_animation(node, time_ms) {
-//     css_time = `.0${time_ms}s`
-//     node.style.cssText = `transition: all ${css_time} linear; transform: scale(0.95);`
-//     setTimeout(function() {
-//         node.style.cssText = `transition: all ${css_time} linear; transform: scale(1);`
-//     }, time_ms)
-// }
+/** Функция для анимации элемента, по которому происходит клик. */
+function click_animation(node, time_ms) {
+    css_time = `.0${time_ms}s`
+    node.style.cssText = `transition: all ${css_time} linear; transform: scale(0.95);`
+    setTimeout(function() {
+        node.style.cssText = `transition: all ${css_time} linear; transform: scale(1);`
+    }, time_ms)
+}
 
 function getCore() {
     return fetch('/core/', {
@@ -179,6 +179,10 @@ function setAutoSave() {
     setInterval(function() {
         updateCoins(Game.coins) 
     }, 60000) 
+}
+
+function setSave () { 
+    updateCoins(Game.coins) 
 }
 
 function getCookie(name) { 

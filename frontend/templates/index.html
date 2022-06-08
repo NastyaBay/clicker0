@@ -10,17 +10,58 @@
         <nav class="nav">
             Привет, {{ user.username }}
             <a href="{% url 'logout' %}">Выйти</a>
+
+            <h3>Достижения</h3> 
+            <div class="ds">
+            {% if core.clikc_power >= 10 %}
+                <p class="power_d"> Cила клика: 10 </p>
+            {% endif %}
+            {% if core.clikc_power >= 100 %}
+                <p class="power_d"> Cила клика: 100 </p>
+            {% endif %}
+            {% if core.clikc_power >= 200 %}
+                <p class="power_d"> Cила клика: 200 </p>
+            {% endif %}
+            {% if core.clikc_power >= 300 %}
+                <p class="power_d"> Cила клика: 300 </p>
+            {% endif %}
+            {% if core.clikc_power >= 500 %}
+                <p class="power_d"> Cила клика: 500 </p>
+            {% endif %}
+            {% if core.clikc_power >= 1000 %}
+                <p class="power_d"> Cила клика: 1000 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 10 %}
+                <p class="power_ad"> Cила дракончиков: 10 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 100 %}
+                <p class="power_ad"> Cила дракончиков: 100 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 200 %}
+                <p class="power_ad"> Cила дракончиков: 200 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 300 %}
+                <p class="power_ad"> Cила дракончиков: 130 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 500 %}
+                <p class="power_ad"> Cила дракончиков: 500 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 1000 %}
+                <p class="power_ad"> Cила дракончиков: 1000 </p>
+            {% endif %}
+            </div>
         </nav>
 
         <div class="container">
             <div id='coins'>{{core.coins}}</div> 
-            <img class='drac' src= "{% static 'imgs/drac.png' %}" = onclick="call_click()">
+            <img class='drac' src= "{% static 'imgs/drac.png' %}" id="drac" onclick="call_click()">
             <p>
-                Невероятная мощь клика: <span id="clikc_power">{{ core.clikc_power }}</span> 
+                Огненая мощь клика: <span id="clikc_power">{{ core.clikc_power }}</span> 
             </p>
-            <p>
-                Самостоятельная дружина кликеров <span id="auto_click_power">{{ core.auto_click_power }}</span> 
+            <p>  
+                Самостоятельные дракончики: <span id="auto_click_power">{{ core.auto_click_power }}</span> 
             </p>
+            <button class="save" onclick="setSave()">Cохранить монетки</button>
         </div>
 
         <aside class="boosts" id="boosts"> 

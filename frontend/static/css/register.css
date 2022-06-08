@@ -1,4 +1,14 @@
 body{
-    background-color: rgb(176, 225, 240);
+    background-image: linear-gradient(to bottom, rgb(176, 225, 240), rgb(231, 175, 71));
     text-align: center;
+} 
+img{
+    padding: 100px;
+    width: 28%;
+    transform: scaleX(-1);
 }
+input{
+    border: 1px solid rgb(238, 200, 130);
+    background-color: rgb(240, 246, 248);
+    border-radius: 5px;
+} 

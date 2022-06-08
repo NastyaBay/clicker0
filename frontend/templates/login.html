@@ -5,16 +5,19 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head> 
 <body> 
-    <h1>Авторизация</h1>
-    <form action="{% url 'login' %}" method='POST'> 
-        {% csrf_token %} 
-        {{ form.username }} 
-        {{ form.password }} 
-        {% if invalid %} 
-            <p>Введи нормальные данные</p> 
-        {% endif %} 
-        <input type="submit"> 
-    </form>
-    <a href="{% url 'register' %}">Не зарегистрирован?</a>
+    <div>
+        <h1>Авторизация</h1>
+        <form action="{% url 'login' %}" method='POST'> 
+            {% csrf_token %} 
+            {{ form.username }} 
+            {{ form.password }} 
+            {% if invalid %} 
+                <p>Введи нормальные данные</p> 
+            {% endif %} 
+            <input type="submit"> 
+        </form>
+        <a href="{% url 'register' %}">Не зарегистрирован?</a>
+    </div>
+    <img src= "{% static 'imgs/drac.png' %}">
 </body> 
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(152, 217, 236);
+    background-image: linear-gradient(to bottom, rgb(176, 225, 240), rgb(231, 175, 71));
 }
 .app {
     display: flex;
@@ -12,6 +12,8 @@ body{
     flex: 1;
     flex-direction: column;
     height: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
 }
 .container {
     display: flex;
@@ -28,12 +30,45 @@ body{
     height: 100%;
 }
 .drac{
-    width: 50%;
+    width: 60%;
     cursor: pointer;
 }
 .boost_0{
-    background-color: white;
+    background-color: rgb(241, 191, 98);
+    border-radius: 10px;
+    border: 2px solid rgb(176, 223, 238);
 }
 .boost_1{
-    background-color: rgb(28, 149, 165);
+    background-color: rgb(66, 197, 214);
+    border-radius: 10px;
+    border: 3px solid rgb(176, 223, 238);
+}
+h3{
+    text-align: center;
+    
+}
+.save{
+    border-radius: 10px;
+    border: 0px;
+}
+.save:active{
+    background-color: rgb(231, 175, 71);
+}
+.power_d{
+    border: 0px;
+    background-color: rgb(241, 191, 98);
+    border-radius: 20px;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    padding-top: 20px;
+}
+.power_ad{
+    background-color: rgb(66, 197, 214);
+    border: 0px;
+    border-radius: 20px;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    padding-top: 20px;
 }
