@@ -12,3 +12,25 @@ input{
     background-color: rgb(240, 246, 248);
     border-radius: 5px;
 } 
+img:active{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        width: 34%;
+        transform: scaleX(-1);
+    }
+    25% {
+        width: 30%;
+        transform: scaleX(-1);
+    }
+    50%{
+        width: 32%;
+        transform: scaleX(-1);
+    }
+    to {
+        width: 28%;
+        transform: scaleX(-1);
+    }
+  }
